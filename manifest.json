@@ -4,17 +4,17 @@
     "description": "Blocks LinkedIn ads",
     "version": "0.0.1",
     "author": "",
-    "browser_action": {
+    "action": {
         "default_title": "LinkedIn AdBlocker"
     },
     "permissions": [
         "tabs",
-        "webNavigation",
-        "https://www.linkedin.com/"
+        "webNavigation"
+    ],
+    "host_permissions": [
+        "https://www.linkedin.com/*"
     ],
     "background": {
-        "service_worker": [
-            "background.js"
-        ]
+        "service_worker": "background.js"
     }
 }
