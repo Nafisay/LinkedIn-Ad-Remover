@@ -9,6 +9,9 @@ chrome.webNavigation.onCommitted.addListener(function (tab) {
         chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => {
 
             // Get the URL of the webpage
+            if (tabs[0] === undefined) {
+                return;
+            }
             let url = tabs[0].url;
             // Remove unnecessary protocol definitions and www subdomain from the URL
             let parsedUrl = url.replace("https://", "")
