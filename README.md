@@ -1,2 +1,2 @@
 # AdBlocker
-A browser extension to block linkedin ads
+A browser extension to block Ads on LinkedIn
